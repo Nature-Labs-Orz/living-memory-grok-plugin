@@ -12,7 +12,7 @@ This is the hosted integration. It is different from the Local stdio plugin: can
 grok plugin install Nature-Labs-Orz/living-memory-grok-plugin
 ```
 
-Complete the Living Memory OAuth sign-in when Grok requests it. Sign in with your own account; the connection uses your existing World. If you do not yet have an accessible World, follow Living Memory's onboarding. The plugin does not grant free storage or bypass account entitlement. Signing in does not itself buy a plan; manage availability and billing through the Living Memory website.
+Complete the Living Memory OAuth sign-in when Grok requests it. Sign in with your own account. An account that already has a World connects to that World. An account with no World yet gets a Free Room: a small temporary place, 1 MiB, usable immediately. A Free Room stays while it is used. It is not a trial World, and what is stored there does not move into a World. Signing in does not itself buy a plan; a persistent World is managed through the Living Memory website.
 
 After installation, start a new Grok session. Open `/mcps`, select `living-memory`, and press `i` to authenticate. If the server list has not refreshed, press `r`. Grok account login and Living Memory authorization are separate connections.
 
