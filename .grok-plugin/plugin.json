@@ -1,0 +1,14 @@
+{
+  "name": "living-memory",
+  "version": "1.0.1",
+  "description": "Save memories, recall earlier context, and exchange temporary handoffs through your hosted Living Memory World.",
+  "author": {
+    "name": "Nature Labs",
+    "url": "https://github.com/Nature-Labs-Orz"
+  },
+  "homepage": "https://viibe.to/living-memory",
+  "repository": "https://github.com/Nature-Labs-Orz/living-memory-grok-plugin",
+  "license": "Apache-2.0",
+  "keywords": ["living-memory", "living memory", "living memory handoff"],
+  "mcpServers": "./.mcp.json"
+}

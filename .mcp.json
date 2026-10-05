@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "living-memory": {
+      "type": "http",
+      "url": "https://lme.viibe.to/mcp"
+    }
+  }
+}
