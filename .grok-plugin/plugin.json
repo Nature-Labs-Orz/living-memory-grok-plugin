@@ -1,7 +1,7 @@
 {
   "name": "living-memory",
-  "version": "1.0.1",
-  "description": "Save memories, recall earlier context, and exchange temporary handoffs through your hosted Living Memory World or Free Room.",
+  "version": "1.1.0",
+  "description": "Save and recall memories, exchange temporary handoffs, and work with Capsules and shared Rooms in your hosted Living Memory World or Free Room.",
   "author": {
     "name": "Nature Labs",
     "url": "https://github.com/Nature-Labs-Orz"
@@ -9,6 +9,12 @@
   "homepage": "https://viibe.to/living-memory",
   "repository": "https://github.com/Nature-Labs-Orz/living-memory-grok-plugin",
   "license": "Apache-2.0",
-  "keywords": ["living-memory", "living memory", "living memory handoff"],
+  "keywords": [
+    "living-memory",
+    "living memory",
+    "living memory handoff",
+    "living memory capsule",
+    "pakkana"
+  ],
   "mcpServers": "./.mcp.json"
 }

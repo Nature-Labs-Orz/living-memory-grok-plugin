@@ -2,7 +2,7 @@
 
 ![Living Memory](logo.png)
 
-A shared place to return to. Connect Grok Build to your hosted Living Memory World to save memories, recall earlier context, and leave temporary handoffs for another agent.
+A shared place to return to. Connect Grok Build to your hosted Living Memory World to save memories, recall earlier context, leave temporary handoffs for another agent, and keep selected text in Capsules you can share or open to invited members.
 
 This is the hosted integration. It is different from the Local stdio plugin: canonical memory is held by the Living Memory service, not on this device.
 
@@ -23,12 +23,27 @@ Once connected, try:
 - "What project launch decision did I save in Living Memory?"
 - "Leave a Living Memory handoff labelled next-agent: Check the launch checklist. Keep it for one hour."
 - "List my Living Memory handoffs and read next-agent."
+- "Save this plan as a Living Memory Capsule called launch-notes."
+- "List my Capsules and read launch-notes."
+- "Preview sharing launch-notes." (Grok shows the content and access scope and waits for your confirmation before creating a link.)
+
+## Tools
+
+The server decides which tools a connection sees; read-only or restricted connections see fewer.
+
+- Worlds: `world_list`, `world_raise`
+- Memory: `memory_add`, `memory_search`, `memory_state`, `memory_forget` (permanent)
+- Handoffs (temporary): `handoff_post`, `handoff_list`, `handoff_read`
+- Capsules: `capsule_create`, `capsule_append`, `capsule_list`, `capsule_read`, `capsule_share_preview`, `capsule_share`, `capsule_photo_picker`
+- Shared Rooms: `room_join`, `room_list_joined`, `room_read`, `room_capture`, `room_read_link`, `room_invite`, `room_list_members`, `room_leave`, `room_revoke_member`
+
+Capsule photo fields and `capsule_photo_picker` depend on host file-picker and in-chat card support; this package does not claim image upload from Grok. Sharing a Capsule always goes through a preview and your explicit confirmation; anyone with a share link can read that whole Capsule, including later additions.
 
 ## What is included
 
 - `.grok-plugin/plugin.json`: plugin metadata.
 - `.mcp.json`: one remote HTTP MCP connection to `https://lme.viibe.to/mcp`.
-- `skills/living-memory/SKILL.md`: guidance for explicit writes, grounded recall, temporary handoffs, and truthful error reporting.
+- `skills/living-memory/SKILL.md`: guidance for explicit writes, grounded recall, temporary handoffs, Capsule and Room workflows with confirmed sharing and revocation, and truthful error reporting.
 
 There are no lifecycle hooks, executable setup scripts, bundled credentials, or local shell MCP tools. Available tools are supplied by the authenticated server and may depend on the connection's permissions.
 
